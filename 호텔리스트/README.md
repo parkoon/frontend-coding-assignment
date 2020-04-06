@@ -14,8 +14,8 @@
 4. 아래 라이브러리 이외에 다른 라이브러리 사용을 금합니다.
 
 - `styled-components`
-- `react-router-dom``
-- ``react-input-range`
+- `react-router-dom`
+- `react-input-range`
 
 5. 모든 컴포넌트는 웹 표준을 지켜야 하며, 시맨틱하게 작성되어야 합니다.
 
@@ -51,44 +51,40 @@
 
 - 요청결과
 
-          ```json
-
+  ```json
   [
-  {
-  "id": 0,
-  "name": "사랑채 블랙호스텔",
-  "freeServices": [],
-  "imageUrl": "",
-  "rate": 3,
-  "reviewScore": 8.9,
-  "totalReviewCount": 466
-  },
-  {
-  "id": 1,
-  "name": "K- 호텔",
-  "freeServices": [],
-  "imageUrl": "",
-  "rate": 5,
-  "reviewScore": 7.1,
-  "totalReviewCount": 126
-  },
-  {
-  "id": 2,
-  "name": "스타 레드호텔",
-  "freeServices": [
-  "FREE-PARKING",
-  "FREE-AIRPORT-PICKUP"
-  ],
-  "imageUrl": "",
-  "rate": 4,
-  "reviewScore": 8.2,
-  "totalReviewCount": 426
-  },
+    {
+      "id": 0,
+      "name": "사랑채 블랙호스텔",
+      "freeServices": [],
+      "imageUrl": "",
+      "rate": 3,
+      "reviewScore": 8.9,
+      "totalReviewCount": 466
+    },
+    {
+      "id": 1,
+      "name": "K- 호텔",
+      "freeServices": [],
+      "imageUrl": "",
+      "rate": 5,
+      "reviewScore": 7.1,
+      "totalReviewCount": 126
+    },
+    {
+      "id": 2,
+      "name": "스타 레드호텔",
+      "freeServices": [
+        "FREE-PARKING",
+        "FREE-AIRPORT-PICKUP"
+      ],
+      "imageUrl": "",
+      "rate": 4,
+      "reviewScore": 8.2,
+      "totalReviewCount": 426
+    },
   ....
   ]
-
-  ```
-
   ```
 
 #### 1.4.2 호텔 가격을 조회하는 API
@@ -99,15 +95,11 @@
 
 - 요청 결과
 
-          ```json
-
+  ```json
   {
-  "1": 15123,
-  "5": 54120,
-  "10": 13400,
-  "15": 210000
+    "1": 15123,
+    "5": 54120,
+    "10": 13400,
+    "15": 210000
   }
-
-  ```
-
   ```
