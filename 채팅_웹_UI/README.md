@@ -16,4 +16,5 @@ https://scene.zeplin.io/project/5d527bdedd6f4cb2bffa5538
 - JavaScript 프레임워크을 사용해 SPA(Single Page Application)로 만들어주세요. 어떠한 프레임워크를 사용해도 괜찮습니다.
 
 - 필수는 아니지만, 아래 애니메이션을 구현하시면 더 좋은 평가를 받을 수 있습니다.
-  [목록->채팅](scene1.gif), [채팅->사진추가](scene2.gif)
+  ![목록->채팅](scene1.gif)
+  ![채팅->사진추가](scene2.gif)
