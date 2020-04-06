@@ -27,6 +27,8 @@
 
 ### 1.3 참고할 화면
 
+[클릭](hotel_web-ui.png)
+
 ### 1.4 API 및 데이터 구조
 
 > base_url:
