@@ -41,17 +41,20 @@
    - 입력한 번호가 9자리 이상이라면, 아래 API 를 호출해 추천 은행 목록을 가져옵니다.
 
      ```bash
-     GET - http:// blabla
+     GET - http://localhost:3030/api/v1/account?no=102947384726
      ```
 
-     ```json
-     [
+     ```js
        {
-         image: 'https://'
-         name: '신한은행',
-      		code: 'QDKSJ283II'
-       }
-     ]
+         success: true,
+         banks: [{
+           logo: "https://i.picsum.photos/id/12/100/100.jpg",
+           name: "신한은행",
+           code: "S01",
+         },
+         ...
+        ]
+       },
      ```
 
    - 위 API 를 이용해 `input` 아래에 은행 리스트를 출력 해줍니다.
@@ -67,22 +70,30 @@
    - 인증 페이지 진입 시 아래 API 를 호출하여 인증 번호를 중앙에 보여줍니다.
 
      ```bash
-     POST - https:// blabla
+     POST - http://localhost:3030/api/v1/account
      ```
 
-     ```json
+     ```js
+     // JSON 형식으로 body 에 넣어서 보내야 할 데이터
      {
-       name: '신한은행'
-       code: 'QDKSJ283II'
-       account: '102938472838'
+        name: "신한은행",
+        code: "S01",
+        account: "102938472838",
      }
+     // 응답데이터
      {
-       success: true
+       success: true,
+       verification: 1394,
      }
      ```
 
-   - 요청을 하는 동안 버튼에 로딩 UI 를 적용하고, 클릭을 할 수 없도록 합니다.
+   - verification 코드를 받았다면, 아래 API 로 인증코드를 전송합니다.
+     ```bash
+     GET - http://localhost:3030/api/v1/verification?code=3485
+     ```
+   - 인증 요청을 하는 동안 버튼에 로딩 UI 를 적용하고, 클릭을 할 수 없도록 합니다.
    - 인증 결과가 `success: false` 로 왔을 경우에는 다시 인증하라는 팝업을 띄어주고, 확인 버튼 클릭 시 같은 데이터로 다시 한 번 요청을 보냅니다.
+   - 인증 요청이 실패 했을 경우 3번까지만 **retry** 를 하고 3번까지 실패 했다면, 서비스에 문제가 생겼다는 알림과 함께 첫 페이지로 redirect 시킵니다.
 
 3) 인증 완료
 
