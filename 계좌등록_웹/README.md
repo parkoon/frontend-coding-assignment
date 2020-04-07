@@ -41,7 +41,7 @@
    - 입력한 번호가 9자리 이상이라면, 아래 API 를 호출해 추천 은행 목록을 가져옵니다.
 
      ```bash
-     GET - http://localhost:3030/api/v1/account?no=102947384726
+     GET - https://fe-account-api.herokuapp.com/api/v1/account?no=102947384726
      ```
 
      ```js
@@ -70,7 +70,7 @@
    - 인증 페이지 진입 시 아래 API 를 호출하여 인증 번호를 중앙에 보여줍니다.
 
      ```bash
-     POST - http://localhost:3030/api/v1/account
+     POST - https://fe-account-api.herokuapp.com/api/v1/account
      ```
 
      ```js
@@ -89,7 +89,7 @@
 
    - verification 코드를 받았다면, 아래 API 로 인증코드를 전송합니다.
      ```bash
-     GET - http://localhost:3030/api/v1/verification?code=3485
+     GET - https://fe-account-api.herokuapp.com/api/v1/verification?code=3485
      ```
    - 인증 요청을 하는 동안 버튼에 로딩 UI 를 적용하고, 클릭을 할 수 없도록 합니다.
    - 인증 결과가 `success: false` 로 왔을 경우에는 다시 인증하라는 팝업을 띄어주고, 확인 버튼 클릭 시 같은 데이터로 다시 한 번 요청을 보냅니다.
