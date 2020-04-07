@@ -7,6 +7,8 @@ const server = http.createServer(app);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+const PORT = process.env.PORT || 3030;
+
 const BANKS = [
   {
     code: "S01",
@@ -45,6 +47,10 @@ const BANKS = [
     name: "NH농협",
   },
 ];
+
+app.get("/", (req, res) => {
+  res.send(`<h3>Parkoon's test api server</h3>`);
+});
 app.get("/api/v1/account", (req, res) => {
   const { no } = req.query;
 
@@ -140,6 +146,6 @@ app.get("/api/v1/verification", (req, res) => {
   }, 3000);
 });
 
-server.listen(3030, () => {
-  console.log(`Server is running on ${3030} port`);
+server.listen(PORT, () => {
+  console.log(`Server is running on ${PORT} port`);
 });
